@@ -36,7 +36,7 @@ export function ApprovalActions({ leaveId, employeeName, onApproval }: ApprovalA
       onApproval(leaveId, 'Approved');
       toast.success(`Leave request for ${employeeName} has been approved`);
       setIsApproveOpen(false);
-    } catch (error) {
+    } catch {
       toast.error('Failed to approve leave request');
     } finally {
       setIsProcessing(false);
@@ -57,7 +57,7 @@ export function ApprovalActions({ leaveId, employeeName, onApproval }: ApprovalA
       toast.success(`Leave request for ${employeeName} has been rejected`);
       setIsRejectOpen(false);
       setRejectionReason('');
-    } catch (error) {
+    } catch {
       toast.error('Failed to reject leave request');
     } finally {
       setIsProcessing(false);

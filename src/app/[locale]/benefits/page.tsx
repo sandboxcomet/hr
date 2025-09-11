@@ -86,14 +86,14 @@ export default function BenefitsPage() {
           const data = await response.json();
           setBenefits(data);
         } else {
-          const mockData = await import('/mock/benefits.json');
-          setBenefits(mockData.default);
+          const { mockData } = await import('@/lib/mock-data');
+          setBenefits(mockData.benefits as Benefits[]);
         }
       } catch (error) {
         console.error('Error fetching benefits:', error);
         try {
-          const mockData = await import('/mock/benefits.json');
-          setBenefits(mockData.default);
+          const { mockData } = await import('@/lib/mock-data');
+          setBenefits(mockData.benefits as Benefits[]);
         } catch (mockError) {
           console.error('Error loading mock data:', mockError);
         }

@@ -3,7 +3,7 @@ import { KpiCards } from '@/components/KpiCards';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
-import { CalendarDays, Clock, Users, BookOpen } from 'lucide-react';
+import { CalendarDays, Users, BookOpen } from 'lucide-react';
 import { getTranslations } from 'next-intl/server';
 
 export default async function Dashboard() {

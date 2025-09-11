@@ -5,7 +5,6 @@ import { Shell } from "@/components/Shell";
 import { Toaster } from "@/components/ui/sonner";
 import {NextIntlClientProvider} from 'next-intl';
 import {getMessages} from 'next-intl/server';
-import {notFound} from 'next/navigation';
 
 const notoSansThai = Noto_Sans_Thai({
   variable: "--font-noto-sans-thai",
@@ -30,7 +29,7 @@ export default async function LocaleLayout({
 }) {
   const {locale} = await params;
   // Validate that the incoming `locale` parameter is valid
-  if (!locales.includes(locale as any)) notFound();
+  if (!locales.includes(locale)) return;
   
   // Providing all messages to the client
   // side is the easiest way to get started

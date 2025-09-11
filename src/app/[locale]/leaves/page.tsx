@@ -116,12 +116,12 @@ export default function LeavesPage() {
           if (leavesResponse.ok) {
             leavesData = await leavesResponse.json();
           } else {
-            const mockLeaves = await import('/mock/leaves.json');
-            leavesData = mockLeaves.default;
+            const { mockData } = await import('@/lib/mock-data');
+            leavesData = mockData.leaves as Leave[];
           }
         } catch {
-          const mockLeaves = await import('/mock/leaves.json');
-          leavesData = mockLeaves.default;
+          const { mockData } = await import('@/lib/mock-data');
+          leavesData = mockData.leaves as Leave[];
         }
 
         // Fetch employees
@@ -131,12 +131,12 @@ export default function LeavesPage() {
           if (employeesResponse.ok) {
             employeesData = await employeesResponse.json();
           } else {
-            const mockEmployees = await import('/mock/employees.json');
-            employeesData = mockEmployees.default;
+            const { mockData } = await import('@/lib/mock-data');
+            employeesData = mockData.employees as Employee[];
           }
         } catch {
-          const mockEmployees = await import('/mock/employees.json');
-          employeesData = mockEmployees.default;
+          const { mockData } = await import('@/lib/mock-data');
+          employeesData = mockData.employees as Employee[];
         }
 
         setLeaves(leavesData);
@@ -151,7 +151,7 @@ export default function LeavesPage() {
     fetchData();
   }, []);
 
-  const handleLeaveSubmit = (data: any) => {
+  const handleLeaveSubmit = (data: {employee_id: string; start_date: string; end_date: string; type: string; reason: string}) => {
     const employee = employees.find(emp => emp.id === parseInt(data.employee_id));
     const startDate = new Date(data.start_date);
     const endDate = new Date(data.end_date);

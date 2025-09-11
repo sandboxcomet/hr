@@ -87,7 +87,7 @@ export function LeaveForm({ employees, onSubmit }: LeaveFormProps) {
       toast.success('Leave request submitted successfully');
       reset();
       setIsOpen(false);
-    } catch (error) {
+    } catch {
       toast.error('Failed to submit leave request');
     } finally {
       setIsSubmitting(false);

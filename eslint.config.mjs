@@ -20,6 +20,11 @@ const eslintConfig = [
       "next-env.d.ts",
     ],
   },
+  {
+    rules: {
+      "@next/next/no-html-link-for-pages": "off", // Disable problematic rule for locale routing
+    },
+  },
 ];
 
 export default eslintConfig;

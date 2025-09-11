@@ -100,14 +100,14 @@ export default function PerformancePage() {
           const data = await response.json();
           setPerformances(data);
         } else {
-          const mockData = await import('/mock/performance.json');
-          setPerformances(mockData.default);
+          const { mockData } = await import('@/lib/mock-data');
+          setPerformances(mockData.performance as Performance[]);
         }
       } catch (error) {
         console.error('Error fetching performance:', error);
         try {
-          const mockData = await import('/mock/performance.json');
-          setPerformances(mockData.default);
+          const { mockData } = await import('@/lib/mock-data');
+          setPerformances(mockData.performance as Performance[]);
         } catch (mockError) {
           console.error('Error loading mock data:', mockError);
         }

@@ -104,14 +104,14 @@ export default function TrainingPage() {
           const data = await response.json();
           setTrainings(data);
         } else {
-          const mockData = await import('/mock/trainings.json');
-          setTrainings(mockData.default);
+          const { mockData } = await import('@/lib/mock-data');
+          setTrainings(mockData.trainings as Training[]);
         }
       } catch (error) {
         console.error('Error fetching trainings:', error);
         try {
-          const mockData = await import('/mock/trainings.json');
-          setTrainings(mockData.default);
+          const { mockData } = await import('@/lib/mock-data');
+          setTrainings(mockData.trainings as Training[]);
         } catch (mockError) {
           console.error('Error loading mock data:', mockError);
         }

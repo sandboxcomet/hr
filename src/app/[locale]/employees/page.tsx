@@ -202,7 +202,7 @@ export default function EmployeesPage() {
         <div className="flex items-center justify-between">
           <div>
             <h1 className="text-3xl font-bold text-gray-900">Employees</h1>
-            <p className="text-gray-600 mt-1">Manage your organization's employees</p>
+            <p className="text-gray-600 mt-1">Manage your organization&apos;s employees</p>
           </div>
         </div>
         <div className="flex items-center justify-center h-64">
@@ -218,7 +218,7 @@ export default function EmployeesPage() {
       <div className="flex items-center justify-between">
         <div>
           <h1 className="text-3xl font-bold text-gray-900">Employees</h1>
-          <p className="text-gray-600 mt-1">Manage your organization's employees</p>
+          <p className="text-gray-600 mt-1">Manage your organization&apos;s employees</p>
         </div>
         <Button className="rounded-2xl">
           <Plus className="w-4 h-4 mr-2" />

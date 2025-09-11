@@ -34,23 +34,20 @@ export default function SelfServicePage() {
     const fetchUserData = async () => {
       try {
         // Fetch employee data
-        const employeesData = await import('/mock/employees.json');
-        const currentEmployee = employeesData.default.find(emp => emp.id === currentUserId);
+        const { mockData } = await import('@/lib/mock-data');
+        const currentEmployee = (mockData.employees as Employee[]).find(emp => emp.id === currentUserId);
         setEmployee(currentEmployee || null);
 
         // Fetch leaves
-        const leavesData = await import('/mock/leaves.json');
-        const userLeaves = leavesData.default.filter(leave => leave.employee_id === currentUserId);
+        const userLeaves = (mockData.leaves as Leave[]).filter(leave => leave.employee_id === currentUserId);
         setLeaves(userLeaves);
 
         // Fetch payrolls
-        const payrollsData = await import('/mock/payroll.json');
-        const userPayrolls = payrollsData.default.filter(payroll => payroll.employee_id === currentUserId);
+        const userPayrolls = (mockData.payroll as Payroll[]).filter(payroll => payroll.employee_id === currentUserId);
         setPayrolls(userPayrolls);
 
         // Fetch benefits
-        const benefitsData = await import('/mock/benefits.json');
-        const userBenefits = benefitsData.default.find(benefit => benefit.employee_id === currentUserId);
+        const userBenefits = (mockData.benefits as Benefits[]).find(benefit => benefit.employee_id === currentUserId);
         setBenefits(userBenefits || null);
       } catch (error) {
         console.error('Error fetching user data:', error);

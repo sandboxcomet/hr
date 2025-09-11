@@ -6,7 +6,7 @@ import { Badge } from '@/components/ui/badge';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { ColumnDef } from '@tanstack/react-table';
 import { TimeLog } from '@/types';
-import { Clock, Users, AlertCircle, CheckCircle } from 'lucide-react';
+import { Clock, AlertCircle, CheckCircle } from 'lucide-react';
 
 const columns: ColumnDef<TimeLog>[] = [
   {
@@ -98,14 +98,14 @@ export default function AttendancePage() {
           setTimeLogs(data);
         } else {
           // Fallback to mock data
-          const mockData = await import('/mock/time_logs.json');
-          setTimeLogs(mockData.default);
+          const { mockData } = await import('@/lib/mock-data');
+          setTimeLogs(mockData.timeLogs as TimeLog[]);
         }
       } catch (error) {
         console.error('Error fetching time logs:', error);
         try {
-          const mockData = await import('/mock/time_logs.json');
-          setTimeLogs(mockData.default);
+          const { mockData } = await import('@/lib/mock-data');
+          setTimeLogs(mockData.timeLogs as TimeLog[]);
         } catch (mockError) {
           console.error('Error loading mock data:', mockError);
         }

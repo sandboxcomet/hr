@@ -50,14 +50,8 @@ const messages = {
 const locales = ['en', 'th'];
  
 export default getRequestConfig(async ({locale}) => {
-  // Debug logging
-  console.log('i18n getRequestConfig called with locale:', locale);
-  
   // Ensure we have a valid locale
   const validLocale = locale && locales.includes(locale) ? locale : 'th';
-  
-  console.log('Using validLocale:', validLocale);
-  console.log('Messages keys:', Object.keys(messages[validLocale as keyof typeof messages] || messages.th));
   
   return {
     locale: validLocale,

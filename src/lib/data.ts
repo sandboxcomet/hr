@@ -155,33 +155,33 @@ export async function getEmployee(id: number): Promise<Employee | null> {
 
 // Client-side data functions that work in browser
 export function getEmployeesClient(): Employee[] {
-  return mockData.employees;
+  return mockData.employees as Employee[];
 }
 
 export function getLeavesClient(): Leave[] {
-  return mockData.leaves;
+  return mockData.leaves as Leave[];
 }
 
 export function getTimeLogsClient(): TimeLog[] {
-  return mockData.timeLogs;
+  return mockData.timeLogs as TimeLog[];
 }
 
 export function getPayrollClient(): Payroll[] {
-  return mockData.payroll;
+  return mockData.payroll as Payroll[];
 }
 
 export function getCandidatesClient(): Candidate[] {
-  return mockData.candidates;
+  return mockData.candidates as Candidate[];
 }
 
 export function getPerformanceClient(): Performance[] {
-  return mockData.performance;
+  return mockData.performance as Performance[];
 }
 
 export function getTrainingsClient(): Training[] {
-  return mockData.trainings;
+  return mockData.trainings as Training[];
 }
 
 export function getBenefitsClient(): Benefits[] {
-  return mockData.benefits;
+  return mockData.benefits as Benefits[];
 }

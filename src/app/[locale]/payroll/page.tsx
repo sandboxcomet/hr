@@ -109,14 +109,14 @@ export default function PayrollPage() {
           const data = await response.json();
           setPayrolls(data);
         } else {
-          const mockData = await import('/mock/payroll.json');
-          setPayrolls(mockData.default);
+          const { mockData } = await import('@/lib/mock-data');
+          setPayrolls(mockData.payroll as Payroll[]);
         }
       } catch (error) {
         console.error('Error fetching payroll:', error);
         try {
-          const mockData = await import('/mock/payroll.json');
-          setPayrolls(mockData.default);
+          const { mockData } = await import('@/lib/mock-data');
+          setPayrolls(mockData.payroll as Payroll[]);
         } catch (mockError) {
           console.error('Error loading mock data:', mockError);
         }

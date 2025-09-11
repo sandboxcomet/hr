@@ -7,7 +7,7 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { ColumnDef } from '@tanstack/react-table';
 import { Candidate } from '@/types';
-import { UserPlus, Users, Clock, CheckCircle, XCircle, Eye } from 'lucide-react';
+import { UserPlus, Users, Clock, CheckCircle, Eye } from 'lucide-react';
 
 const columns: ColumnDef<Candidate>[] = [
   {
@@ -94,7 +94,7 @@ const columns: ColumnDef<Candidate>[] = [
   {
     id: 'actions',
     header: 'Actions',
-    cell: ({ row }) => {
+    cell: () => {
       return (
         <Button variant="outline" size="sm" className="rounded-xl">
           <Eye className="w-4 h-4 mr-1" />
@@ -117,14 +117,14 @@ export default function RecruitmentPage() {
           const data = await response.json();
           setCandidates(data);
         } else {
-          const mockData = await import('/mock/candidates.json');
-          setCandidates(mockData.default);
+          const { mockData } = await import('@/lib/mock-data');
+          setCandidates(mockData.candidates as Candidate[]);
         }
       } catch (error) {
         console.error('Error fetching candidates:', error);
         try {
-          const mockData = await import('/mock/candidates.json');
-          setCandidates(mockData.default);
+          const { mockData } = await import('@/lib/mock-data');
+          setCandidates(mockData.candidates as Candidate[]);
         } catch (mockError) {
           console.error('Error loading mock data:', mockError);
         }
