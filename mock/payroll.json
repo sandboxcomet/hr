@@ -1,0 +1,110 @@
+[
+  {
+    "id": 1,
+    "employee_id": 1,
+    "employee_name": "John Smith",
+    "emp_code": "EMP001",
+    "month": "January 2024",
+    "base_salary": 95000,
+    "monthly_salary": 7916.67,
+    "overtime_hours": 12,
+    "overtime_rate": 50,
+    "overtime_pay": 600,
+    "allowances": {
+      "transport": 200,
+      "meal": 150,
+      "mobile": 50
+    },
+    "total_allowances": 400,
+    "gross_pay": 8916.67,
+    "deductions": {
+      "tax": 1338.50,
+      "social_security": 267.50,
+      "health_insurance": 150,
+      "provident_fund": 400
+    },
+    "total_deductions": 2156,
+    "net_pay": 6760.67
+  },
+  {
+    "id": 2,
+    "employee_id": 2,
+    "employee_name": "Sarah Johnson",
+    "emp_code": "EMP002",
+    "month": "January 2024",
+    "base_salary": 75000,
+    "monthly_salary": 6250,
+    "overtime_hours": 8,
+    "overtime_rate": 40,
+    "overtime_pay": 320,
+    "allowances": {
+      "transport": 200,
+      "meal": 150,
+      "mobile": 50
+    },
+    "total_allowances": 400,
+    "gross_pay": 6970,
+    "deductions": {
+      "tax": 1045.50,
+      "social_security": 209.10,
+      "health_insurance": 150,
+      "provident_fund": 312.50
+    },
+    "total_deductions": 1717.10,
+    "net_pay": 5252.90
+  },
+  {
+    "id": 3,
+    "employee_id": 3,
+    "employee_name": "Michael Davis",
+    "emp_code": "EMP003",
+    "month": "January 2024",
+    "base_salary": 55000,
+    "monthly_salary": 4583.33,
+    "overtime_hours": 4,
+    "overtime_rate": 30,
+    "overtime_pay": 120,
+    "allowances": {
+      "transport": 200,
+      "meal": 150,
+      "mobile": 50
+    },
+    "total_allowances": 400,
+    "gross_pay": 5103.33,
+    "deductions": {
+      "tax": 765.50,
+      "social_security": 153.10,
+      "health_insurance": 150,
+      "provident_fund": 229.17
+    },
+    "total_deductions": 1297.77,
+    "net_pay": 3805.56
+  },
+  {
+    "id": 4,
+    "employee_id": 4,
+    "employee_name": "Emily Chen",
+    "emp_code": "EMP004",
+    "month": "January 2024",
+    "base_salary": 130000,
+    "monthly_salary": 10833.33,
+    "overtime_hours": 15,
+    "overtime_rate": 70,
+    "overtime_pay": 1050,
+    "allowances": {
+      "transport": 300,
+      "meal": 200,
+      "mobile": 100
+    },
+    "total_allowances": 600,
+    "gross_pay": 12483.33,
+    "deductions": {
+      "tax": 2497.67,
+      "social_security": 374.50,
+      "health_insurance": 200,
+      "provident_fund": 541.67
+    },
+    "total_deductions": 3613.84,
+    "net_pay": 8869.49
+  }
+]

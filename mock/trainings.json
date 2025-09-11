@@ -1,0 +1,124 @@
+[
+  {
+    "id": 1,
+    "title": "React Advanced Patterns",
+    "description": "Advanced React patterns and best practices",
+    "category": "Technical",
+    "instructor": "External - TechEd Solutions",
+    "start_date": "2024-02-15",
+    "end_date": "2024-02-17",
+    "duration_hours": 24,
+    "max_participants": 12,
+    "location": "Conference Room A",
+    "status": "Scheduled",
+    "participants": [
+      {
+        "employee_id": 1,
+        "employee_name": "John Smith",
+        "enrollment_date": "2024-01-10",
+        "status": "Enrolled"
+      },
+      {
+        "employee_id": 4,
+        "employee_name": "Emily Chen",
+        "enrollment_date": "2024-01-08",
+        "status": "Enrolled"
+      }
+    ],
+    "cost_per_participant": 800,
+    "total_cost": 1600
+  },
+  {
+    "id": 2,
+    "title": "Leadership Excellence",
+    "description": "Leadership skills for managers and senior staff",
+    "category": "Leadership",
+    "instructor": "Jennifer Taylor",
+    "start_date": "2024-01-25",
+    "end_date": "2024-01-26",
+    "duration_hours": 16,
+    "max_participants": 8,
+    "location": "Training Room B",
+    "status": "In Progress",
+    "participants": [
+      {
+        "employee_id": 4,
+        "employee_name": "Emily Chen",
+        "enrollment_date": "2024-01-05",
+        "status": "Attending"
+      },
+      {
+        "employee_id": 5,
+        "employee_name": "Robert Wilson",
+        "enrollment_date": "2024-01-05",
+        "status": "Attending"
+      },
+      {
+        "employee_id": 6,
+        "employee_name": "Lisa Anderson",
+        "enrollment_date": "2024-01-05",
+        "status": "Attending"
+      }
+    ],
+    "cost_per_participant": 0,
+    "total_cost": 0
+  },
+  {
+    "id": 3,
+    "title": "Digital Marketing Trends 2024",
+    "description": "Latest trends and strategies in digital marketing",
+    "category": "Marketing",
+    "instructor": "External - Marketing Pro Institute",
+    "start_date": "2024-03-10",
+    "end_date": "2024-03-10",
+    "duration_hours": 8,
+    "max_participants": 15,
+    "location": "Online",
+    "status": "Scheduled",
+    "participants": [
+      {
+        "employee_id": 2,
+        "employee_name": "Sarah Johnson",
+        "enrollment_date": "2024-01-15",
+        "status": "Enrolled"
+      },
+      {
+        "employee_id": 5,
+        "employee_name": "Robert Wilson",
+        "enrollment_date": "2024-01-12",
+        "status": "Enrolled"
+      }
+    ],
+    "cost_per_participant": 300,
+    "total_cost": 600
+  },
+  {
+    "id": 4,
+    "title": "Sales Techniques Masterclass",
+    "description": "Advanced sales techniques and closing strategies",
+    "category": "Sales",
+    "instructor": "External - Sales Excellence Corp",
+    "start_date": "2023-12-10",
+    "end_date": "2023-12-12",
+    "duration_hours": 20,
+    "max_participants": 10,
+    "location": "Conference Room C",
+    "status": "Completed",
+    "participants": [
+      {
+        "employee_id": 3,
+        "employee_name": "Michael Davis",
+        "enrollment_date": "2023-11-20",
+        "status": "Completed"
+      },
+      {
+        "employee_id": 6,
+        "employee_name": "Lisa Anderson",
+        "enrollment_date": "2023-11-18",
+        "status": "Completed"
+      }
+    ],
+    "cost_per_participant": 1200,
+    "total_cost": 2400
+  }
+]

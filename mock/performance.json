@@ -1,0 +1,95 @@
+[
+  {
+    "id": 1,
+    "employee_id": 1,
+    "employee_name": "John Smith",
+    "review_period": "Q4 2023",
+    "goals": [
+      {
+        "title": "Complete React Migration Project",
+        "description": "Migrate legacy components to React",
+        "target_date": "2023-12-31",
+        "status": "Completed",
+        "score": 5
+      },
+      {
+        "title": "Improve Code Quality",
+        "description": "Reduce bug reports by 20%",
+        "target_date": "2023-12-31",
+        "status": "Completed",
+        "score": 4
+      }
+    ],
+    "overall_rating": 4.5,
+    "technical_skills": 5,
+    "communication": 4,
+    "teamwork": 4,
+    "leadership": 3,
+    "manager_feedback": "Excellent technical performance, strong contributor to team projects",
+    "employee_feedback": "Enjoyed working on challenging projects, would like more leadership opportunities",
+    "reviewed_by": 4,
+    "review_date": "2024-01-15"
+  },
+  {
+    "id": 2,
+    "employee_id": 2,
+    "employee_name": "Sarah Johnson",
+    "review_period": "Q4 2023",
+    "goals": [
+      {
+        "title": "Launch Q4 Marketing Campaign",
+        "description": "Execute holiday season marketing campaign",
+        "target_date": "2023-11-30",
+        "status": "Completed",
+        "score": 5
+      },
+      {
+        "title": "Increase Social Media Engagement",
+        "description": "Achieve 25% increase in engagement",
+        "target_date": "2023-12-31",
+        "status": "Completed",
+        "score": 5
+      }
+    ],
+    "overall_rating": 4.8,
+    "technical_skills": 4,
+    "communication": 5,
+    "teamwork": 5,
+    "leadership": 4,
+    "manager_feedback": "Outstanding performance in marketing campaigns, excellent team collaboration",
+    "employee_feedback": "Very satisfied with campaign results, looking forward to bigger challenges",
+    "reviewed_by": 5,
+    "review_date": "2024-01-10"
+  },
+  {
+    "id": 3,
+    "employee_id": 3,
+    "employee_name": "Michael Davis",
+    "review_period": "Q4 2023",
+    "goals": [
+      {
+        "title": "Achieve Sales Target",
+        "description": "Meet Q4 sales quota of $200K",
+        "target_date": "2023-12-31",
+        "status": "Partially Completed",
+        "score": 3
+      },
+      {
+        "title": "Client Relationship Building",
+        "description": "Establish 5 new client relationships",
+        "target_date": "2023-12-31",
+        "status": "Completed",
+        "score": 4
+      }
+    ],
+    "overall_rating": 3.5,
+    "technical_skills": 3,
+    "communication": 4,
+    "teamwork": 4,
+    "leadership": 3,
+    "manager_feedback": "Good progress on relationship building, needs improvement on sales targets",
+    "employee_feedback": "Market conditions were challenging, but learned a lot about client management",
+    "reviewed_by": 6,
+    "review_date": "2024-01-08"
+  }
+]

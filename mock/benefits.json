@@ -1,0 +1,177 @@
+[
+  {
+    "id": 1,
+    "employee_id": 1,
+    "employee_name": "John Smith",
+    "benefits": [
+      {
+        "type": "Health Insurance",
+        "provider": "HealthCare Plus",
+        "coverage": "Family",
+        "monthly_premium": 450,
+        "employee_contribution": 150,
+        "company_contribution": 300,
+        "status": "Active"
+      },
+      {
+        "type": "Dental Insurance",
+        "provider": "DentalCare Pro",
+        "coverage": "Individual",
+        "monthly_premium": 80,
+        "employee_contribution": 25,
+        "company_contribution": 55,
+        "status": "Active"
+      },
+      {
+        "type": "Life Insurance",
+        "provider": "LifeSecure",
+        "coverage": "2x Annual Salary",
+        "monthly_premium": 95,
+        "employee_contribution": 0,
+        "company_contribution": 95,
+        "status": "Active"
+      },
+      {
+        "type": "Gym Membership",
+        "provider": "FitZone",
+        "coverage": "Individual",
+        "monthly_premium": 60,
+        "employee_contribution": 20,
+        "company_contribution": 40,
+        "status": "Active"
+      }
+    ],
+    "total_monthly_cost": 685,
+    "employee_total_contribution": 195,
+    "company_total_contribution": 490
+  },
+  {
+    "id": 2,
+    "employee_id": 2,
+    "employee_name": "Sarah Johnson",
+    "benefits": [
+      {
+        "type": "Health Insurance",
+        "provider": "HealthCare Plus",
+        "coverage": "Individual",
+        "monthly_premium": 280,
+        "employee_contribution": 100,
+        "company_contribution": 180,
+        "status": "Active"
+      },
+      {
+        "type": "Dental Insurance",
+        "provider": "DentalCare Pro",
+        "coverage": "Individual",
+        "monthly_premium": 80,
+        "employee_contribution": 25,
+        "company_contribution": 55,
+        "status": "Active"
+      },
+      {
+        "type": "Life Insurance",
+        "provider": "LifeSecure",
+        "coverage": "1x Annual Salary",
+        "monthly_premium": 62.5,
+        "employee_contribution": 0,
+        "company_contribution": 62.5,
+        "status": "Active"
+      },
+      {
+        "type": "Professional Development",
+        "provider": "Various",
+        "coverage": "Annual Budget",
+        "monthly_premium": 166.67,
+        "employee_contribution": 0,
+        "company_contribution": 166.67,
+        "status": "Active"
+      }
+    ],
+    "total_monthly_cost": 589.17,
+    "employee_total_contribution": 125,
+    "company_total_contribution": 464.17
+  },
+  {
+    "id": 3,
+    "employee_id": 3,
+    "employee_name": "Michael Davis",
+    "benefits": [
+      {
+        "type": "Health Insurance",
+        "provider": "HealthCare Plus",
+        "coverage": "Individual",
+        "monthly_premium": 280,
+        "employee_contribution": 100,
+        "company_contribution": 180,
+        "status": "Active"
+      },
+      {
+        "type": "Life Insurance",
+        "provider": "LifeSecure",
+        "coverage": "1x Annual Salary",
+        "monthly_premium": 45.83,
+        "employee_contribution": 0,
+        "company_contribution": 45.83,
+        "status": "Active"
+      },
+      {
+        "type": "Transportation Allowance",
+        "provider": "Company",
+        "coverage": "Monthly Pass",
+        "monthly_premium": 200,
+        "employee_contribution": 0,
+        "company_contribution": 200,
+        "status": "Active"
+      }
+    ],
+    "total_monthly_cost": 525.83,
+    "employee_total_contribution": 100,
+    "company_total_contribution": 425.83
+  },
+  {
+    "id": 4,
+    "employee_id": 4,
+    "employee_name": "Emily Chen",
+    "benefits": [
+      {
+        "type": "Health Insurance",
+        "provider": "HealthCare Plus",
+        "coverage": "Family",
+        "monthly_premium": 450,
+        "employee_contribution": 150,
+        "company_contribution": 300,
+        "status": "Active"
+      },
+      {
+        "type": "Dental Insurance",
+        "provider": "DentalCare Pro",
+        "coverage": "Family",
+        "monthly_premium": 160,
+        "employee_contribution": 50,
+        "company_contribution": 110,
+        "status": "Active"
+      },
+      {
+        "type": "Life Insurance",
+        "provider": "LifeSecure",
+        "coverage": "3x Annual Salary",
+        "monthly_premium": 162.5,
+        "employee_contribution": 0,
+        "company_contribution": 162.5,
+        "status": "Active"
+      },
+      {
+        "type": "Executive Benefits",
+        "provider": "Various",
+        "coverage": "Comprehensive Package",
+        "monthly_premium": 500,
+        "employee_contribution": 0,
+        "company_contribution": 500,
+        "status": "Active"
+      }
+    ],
+    "total_monthly_cost": 1272.5,
+    "employee_total_contribution": 200,
+    "company_total_contribution": 1072.5
+  }
+]

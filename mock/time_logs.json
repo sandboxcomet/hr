@@ -1,0 +1,98 @@
+[
+  {
+    "id": 1,
+    "employee_id": 1,
+    "employee_name": "John Smith",
+    "date": "2024-01-08",
+    "check_in": "09:00:00",
+    "check_out": "17:30:00",
+    "break_duration": 60,
+    "total_hours": 8.5,
+    "overtime_hours": 0.5,
+    "status": "Present"
+  },
+  {
+    "id": 2,
+    "employee_id": 1,
+    "employee_name": "John Smith",
+    "date": "2024-01-09",
+    "check_in": "08:45:00",
+    "check_out": "18:00:00",
+    "break_duration": 60,
+    "total_hours": 9.25,
+    "overtime_hours": 1.25,
+    "status": "Present"
+  },
+  {
+    "id": 3,
+    "employee_id": 2,
+    "employee_name": "Sarah Johnson",
+    "date": "2024-01-08",
+    "check_in": "09:15:00",
+    "check_out": "17:45:00",
+    "break_duration": 60,
+    "total_hours": 8.5,
+    "overtime_hours": 0.5,
+    "status": "Late"
+  },
+  {
+    "id": 4,
+    "employee_id": 2,
+    "employee_name": "Sarah Johnson",
+    "date": "2024-01-09",
+    "check_in": null,
+    "check_out": null,
+    "break_duration": 0,
+    "total_hours": 0,
+    "overtime_hours": 0,
+    "status": "Absent"
+  },
+  {
+    "id": 5,
+    "employee_id": 3,
+    "employee_name": "Michael Davis",
+    "date": "2024-01-08",
+    "check_in": "09:00:00",
+    "check_out": "17:00:00",
+    "break_duration": 60,
+    "total_hours": 8,
+    "overtime_hours": 0,
+    "status": "Present"
+  },
+  {
+    "id": 6,
+    "employee_id": 3,
+    "employee_name": "Michael Davis",
+    "date": "2024-01-09",
+    "check_in": "09:30:00",
+    "check_out": "17:30:00",
+    "break_duration": 60,
+    "total_hours": 8,
+    "overtime_hours": 0,
+    "status": "Late"
+  },
+  {
+    "id": 7,
+    "employee_id": 4,
+    "employee_name": "Emily Chen",
+    "date": "2024-01-08",
+    "check_in": "08:30:00",
+    "check_out": "18:30:00",
+    "break_duration": 60,
+    "total_hours": 10,
+    "overtime_hours": 2,
+    "status": "Present"
+  },
+  {
+    "id": 8,
+    "employee_id": 4,
+    "employee_name": "Emily Chen",
+    "date": "2024-01-09",
+    "check_in": "08:45:00",
+    "check_out": "17:15:00",
+    "break_duration": 60,
+    "total_hours": 8.5,
+    "overtime_hours": 0.5,
+    "status": "Present"
+  }
+]
