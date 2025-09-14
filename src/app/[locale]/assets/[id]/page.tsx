@@ -1,9 +1,9 @@
 'use client';
 
-import { useState, useMemo } from 'react';
+import { useState } from 'react';
 import { useTranslations } from 'next-intl';
-import { useParams, useRouter } from 'next/navigation';
-import { ArrowLeft, Package, User, Calendar, DollarSign, Wrench, FileText, UserPlus, ArrowRightLeft } from 'lucide-react';
+import { useParams } from 'next/navigation';
+import { ArrowLeft, Package, User, DollarSign, Wrench, UserPlus, ArrowRightLeft } from 'lucide-react';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
@@ -19,7 +19,6 @@ import { Asset, AssetAssignment, MaintenanceLog } from '@/types';
 export default function AssetDetailPage() {
   const t = useTranslations('assets');
   const params = useParams();
-  const router = useRouter();
   const [showAssignModal, setShowAssignModal] = useState(false);
   const [showMaintenanceModal, setShowMaintenanceModal] = useState(false);
 
@@ -36,7 +35,7 @@ export default function AssetDetailPage() {
         <div className="text-center">
           <Package className="w-16 h-16 text-gray-400 mx-auto mb-4" />
           <h2 className="text-xl font-semibold text-gray-900 mb-2">Asset Not Found</h2>
-          <p className="text-gray-600 mb-4">The asset you're looking for doesn't exist.</p>
+          <p className="text-gray-600 mb-4">The asset you&apos;re looking for doesn&apos;t exist.</p>
           <Link href="/assets">
             <Button>
               <ArrowLeft className="w-4 h-4 mr-2" />
@@ -104,7 +103,7 @@ export default function AssetDetailPage() {
     {
       accessorKey: 'employee_name',
       header: 'Employee',
-      cell: ({ row }: { row: any }) => (
+      cell: ({ row }: { row: { original: AssetAssignment } }) => (
         <div>
           <div className="font-medium">{row.original.employee_name}</div>
           <div className="text-sm text-gray-500">{row.original.department}</div>
@@ -114,17 +113,17 @@ export default function AssetDetailPage() {
     {
       accessorKey: 'assigned_date',
       header: 'Assigned Date',
-      cell: ({ row }: { row: any }) => new Date(row.original.assigned_date).toLocaleDateString(),
+      cell: ({ row }: { row: { original: AssetAssignment } }) => new Date(row.original.assigned_date).toLocaleDateString(),
     },
     {
       accessorKey: 'return_date',
       header: 'Return Date',
-      cell: ({ row }: { row: any }) => row.original.return_date ? new Date(row.original.return_date).toLocaleDateString() : '-',
+      cell: ({ row }: { row: { original: AssetAssignment } }) => row.original.return_date ? new Date(row.original.return_date).toLocaleDateString() : '-',
     },
     {
       accessorKey: 'status',
       header: 'Status',
-      cell: ({ row }: { row: any }) => {
+      cell: ({ row }: { row: { original: AssetAssignment } }) => {
         const variants = {
           'Active': 'default',
           'Returned': 'secondary',
@@ -144,7 +143,7 @@ export default function AssetDetailPage() {
     {
       accessorKey: 'maintenance_type',
       header: 'Type',
-      cell: ({ row }: { row: any }) => {
+      cell: ({ row }: { row: { original: MaintenanceLog } }) => {
         const variants = {
           'Preventive': 'default',
           'Corrective': 'secondary',
@@ -160,12 +159,12 @@ export default function AssetDetailPage() {
     {
       accessorKey: 'scheduled_date',
       header: 'Scheduled',
-      cell: ({ row }: { row: any }) => new Date(row.original.scheduled_date).toLocaleDateString(),
+      cell: ({ row }: { row: { original: MaintenanceLog } }) => new Date(row.original.scheduled_date).toLocaleDateString(),
     },
     {
       accessorKey: 'completed_date',
       header: 'Completed',
-      cell: ({ row }: { row: any }) => row.original.completed_date ? new Date(row.original.completed_date).toLocaleDateString() : '-',
+      cell: ({ row }: { row: { original: MaintenanceLog } }) => row.original.completed_date ? new Date(row.original.completed_date).toLocaleDateString() : '-',
     },
     {
       accessorKey: 'technician',
@@ -174,17 +173,17 @@ export default function AssetDetailPage() {
     {
       accessorKey: 'cost',
       header: 'Cost',
-      cell: ({ row }: { row: any }) => `$${row.original.cost.toFixed(2)}`,
+      cell: ({ row }: { row: { original: MaintenanceLog } }) => `$${row.original.cost.toFixed(2)}`,
     },
     {
       accessorKey: 'status',
       header: 'Status',
-      cell: ({ row }: { row: any }) => getMaintenanceStatusBadge(row.original.status),
+      cell: ({ row }: { row: { original: MaintenanceLog } }) => getMaintenanceStatusBadge(row.original.status),
     },
     {
       accessorKey: 'priority',
       header: 'Priority',
-      cell: ({ row }: { row: any }) => getPriorityBadge(row.original.priority),
+      cell: ({ row }: { row: { original: MaintenanceLog } }) => getPriorityBadge(row.original.priority),
     },
   ];
 

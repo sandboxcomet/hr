@@ -3,14 +3,14 @@
 import { useMemo } from 'react';
 import { useTranslations } from 'next-intl';
 import Link from 'next/link';
-import { ArrowLeft, Package, DollarSign, Wrench, AlertTriangle, BarChart3, PieChart, TrendingUp, Calendar } from 'lucide-react';
+import { ArrowLeft, Package, DollarSign, Wrench, AlertTriangle, BarChart3, PieChart, Calendar } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Progress } from '@/components/ui/progress';
 import { KpiCards } from '@/components/KpiCards';
 import { mockData } from '@/lib/mock-data';
-import { Asset, MaintenanceLog, AssetDashboardKPI } from '@/types';
+import { Asset, MaintenanceLog } from '@/types';
 
 export default function AssetReportsPage() {
   const t = useTranslations('assets');
@@ -163,7 +163,7 @@ export default function AssetReportsPage() {
     }
   };
 
-  const getCategoryIcon = (category: string) => {
+  const getCategoryIcon = () => {
     // You could expand this with more specific icons
     return Package;
   };
@@ -276,7 +276,7 @@ export default function AssetReportsPage() {
           <CardContent>
             <div className="space-y-4">
               {reportsData.byCategory.map((item) => {
-                const Icon = getCategoryIcon(item.category);
+                const Icon = getCategoryIcon();
                 return (
                   <div key={item.category} className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
                     <div className="flex items-center space-x-3">

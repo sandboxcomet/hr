@@ -17,7 +17,7 @@ interface MaintenanceModalProps {
   open: boolean;
   onClose: () => void;
   asset: Asset;
-  onAdd: (maintenanceLog: any) => void;
+  onAdd: (maintenanceLog: Record<string, unknown>) => void;
 }
 
 export function MaintenanceModal({ open, onClose, asset, onAdd }: MaintenanceModalProps) {

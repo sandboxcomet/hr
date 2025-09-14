@@ -2,11 +2,11 @@
 
 import { useState, useMemo } from 'react';
 import { useTranslations } from 'next-intl';
-import { Search, Filter, Eye, UserPlus, ArrowUpDown, Package, DollarSign, Wrench, AlertTriangle, BarChart3 } from 'lucide-react';
+import { Search, Eye, UserPlus, Package, DollarSign, Wrench, AlertTriangle, BarChart3 } from 'lucide-react';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { Card, CardContent, CardHeader } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { DataTable } from '@/components/DataTable';
@@ -30,8 +30,6 @@ export default function AssetsPage() {
   const kpiData = useMemo(() => {
     const totalAssets = assets.length;
     const assignedAssets = assets.filter(asset => asset.status === 'Assigned').length;
-    const availableAssets = assets.filter(asset => asset.status === 'Available').length;
-    const underMaintenance = assets.filter(asset => asset.status === 'Under Maintenance').length;
     const totalValue = assets.reduce((sum, asset) => sum + asset.current_value, 0);
     
     // Calculate upcoming maintenance (next 30 days)
@@ -131,7 +129,7 @@ export default function AssetsPage() {
     {
       accessorKey: 'name',
       header: t('assetName'),
-      cell: ({ row }: { row: any }) => (
+      cell: ({ row }: { row: { original: Asset } }) => (
         <div>
           <div className="font-medium">{row.original.name}</div>
           <div className="text-sm text-gray-500">{row.original.brand} {row.original.model}</div>
@@ -145,17 +143,17 @@ export default function AssetsPage() {
     {
       accessorKey: 'status',
       header: t('status'),
-      cell: ({ row }: { row: any }) => getStatusBadge(row.original.status),
+      cell: ({ row }: { row: { original: Asset } }) => getStatusBadge(row.original.status),
     },
     {
       accessorKey: 'condition',
       header: t('condition'),
-      cell: ({ row }: { row: any }) => getConditionBadge(row.original.condition),
+      cell: ({ row }: { row: { original: Asset } }) => getConditionBadge(row.original.condition),
     },
     {
       accessorKey: 'assigned_to',
       header: t('assignedTo'),
-      cell: ({ row }: { row: any }) => (
+      cell: ({ row }: { row: { original: Asset } }) => (
         <div>
           {row.original.assigned_to ? (
             <>
@@ -171,12 +169,12 @@ export default function AssetsPage() {
     {
       accessorKey: 'current_value',
       header: t('currentValue'),
-      cell: ({ row }: { row: any }) => `$${row.original.current_value.toLocaleString()}`,
+      cell: ({ row }: { row: { original: Asset } }) => `$${row.original.current_value.toLocaleString()}`,
     },
     {
       id: 'actions',
       header: 'Actions',
-      cell: ({ row }: { row: any }) => (
+      cell: ({ row }: { row: { original: Asset } }) => (
         <div className="flex items-center space-x-2">
           <Link href={`/assets/${row.original.id}`}>
             <Button variant="ghost" size="sm">
