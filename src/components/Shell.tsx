@@ -29,6 +29,7 @@ import {
   LogOut,
   Menu,
   X,
+  Package,
 } from 'lucide-react';
 
 // Navigation will be defined inside the component to use translations
@@ -53,6 +54,7 @@ export function Shell({ children }: ShellProps) {
     { name: t('performance'), href: `/${locale}/performance`, icon: TrendingUp },
     { name: t('training'), href: `/${locale}/training`, icon: BookOpen },
     { name: t('benefits'), href: `/${locale}/benefits`, icon: Gift },
+    { name: t('assets'), href: `/${locale}/assets`, icon: Package },
     { name: t('selfService'), href: `/${locale}/self-service`, icon: User },
   ];
 

@@ -53,7 +53,7 @@ function KpiCard({ title, value, change, changeType, icon: Icon, description }: 
 }
 
 interface KpiCardsProps {
-  kpis: {
+  kpis?: {
     headcount: number;
     turnover_rate: number;
     pending_leaves: number;
@@ -63,9 +63,38 @@ interface KpiCardsProps {
     avg_performance_rating: number;
     benefits_cost: number;
   };
+  data?: Array<{
+    title: string;
+    value: string | number;
+    description: string;
+    icon: LucideIcon;
+    trend?: { value: number; label: string };
+  }>;
 }
 
-export function KpiCards({ kpis }: KpiCardsProps) {
+export function KpiCards({ kpis, data }: KpiCardsProps) {
+  // If data prop is provided (for Asset Management), use it
+  if (data) {
+    return (
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        {data.map((item, index) => (
+          <KpiCard 
+            key={index} 
+            title={item.title}
+            value={item.value}
+            icon={item.icon}
+            description={item.description}
+            change={item.trend?.label}
+            changeType={item.trend?.value === 0 ? 'neutral' : item.trend?.value && item.trend.value > 0 ? 'positive' : 'negative'}
+          />
+        ))}
+      </div>
+    );
+  }
+
+  // If kpis prop is provided (for Dashboard), use the original logic
+  if (!kpis) return null;
+
   const cards: KpiCardProps[] = [
     {
       title: 'Total Employees',

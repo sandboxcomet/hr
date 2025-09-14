@@ -171,3 +171,98 @@ export interface DashboardKPI {
   avg_performance_rating: number;
   benefits_cost: number;
 }
+
+// Asset types
+export interface Asset {
+  id: number;
+  asset_code: string;
+  name: string;
+  category: string;
+  brand: string;
+  model: string;
+  serial_number: string;
+  status: 'Available' | 'Assigned' | 'Under Maintenance' | 'Disposed';
+  condition: 'Excellent' | 'Good' | 'Fair' | 'Poor';
+  purchase_date: string;
+  purchase_price: number;
+  warranty_expiry: string;
+  location: string;
+  assigned_to: {
+    employee_id: number;
+    employee_name: string;
+    department: string;
+    assigned_date: string;
+  } | null;
+  supplier: string;
+  notes: string;
+  last_maintenance: string | null;
+  next_maintenance: string | null;
+  depreciation_rate: number;
+  current_value: number;
+}
+
+// Asset Assignment types
+export interface AssetAssignment {
+  id: number;
+  asset_id: number;
+  asset_code: string;
+  asset_name: string;
+  employee_id: number;
+  employee_name: string;
+  department: string;
+  assigned_date: string;
+  assigned_by: number;
+  assigned_by_name: string;
+  status: 'Active' | 'Returned' | 'Under Maintenance';
+  notes: string;
+  expected_return_date: string | null;
+  return_date: string | null;
+  return_condition: string | null;
+  return_notes: string | null;
+}
+
+// Maintenance Log types
+export interface MaintenanceLog {
+  id: number;
+  asset_id: number;
+  asset_code: string;
+  asset_name: string;
+  maintenance_type: 'Preventive' | 'Corrective' | 'Emergency';
+  description: string;
+  scheduled_date: string;
+  completed_date: string | null;
+  technician: string;
+  cost: number;
+  status: 'Scheduled' | 'In Progress' | 'Completed' | 'Failed' | 'Cancelled';
+  notes: string;
+  next_maintenance: string | null;
+  downtime_hours: number | null;
+  parts_used: string[];
+  priority: 'Low' | 'Medium' | 'High' | 'Critical';
+}
+
+// Asset Dashboard KPI types
+export interface AssetDashboardKPI {
+  total_assets: number;
+  assigned_assets: number;
+  available_assets: number;
+  under_maintenance: number;
+  total_value: number;
+  upcoming_maintenance: number;
+  overdue_maintenance: number;
+  by_category: {
+    category: string;
+    count: number;
+    value: number;
+  }[];
+  by_status: {
+    status: string;
+    count: number;
+    percentage: number;
+  }[];
+  by_condition: {
+    condition: string;
+    count: number;
+    percentage: number;
+  }[];
+}
